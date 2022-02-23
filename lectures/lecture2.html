@@ -158,10 +158,10 @@
     <div class="dropdown-buttons sourcebuttons">
         
         <a class="issues-button"
-            href="https://github.com/ggeorg02/BAIT580/issues/new?title=Issue%20on%20page%20%2Flectures/lecture2.html&body=Your%20issue%20content%20here."><button
+            href="https://github.com/ggeorg02/cs/issues/new?title=Issue%20on%20page%20%2Flectures/lecture2.html&body=Your%20issue%20content%20here."><button
                 type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
                 title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
-        <a class="edit-button" href="https://github.com/ggeorg02/BAIT580/edit/master/lectures/lecture2.ipynb"><button
+        <a class="edit-button" href="https://github.com/ggeorg02/cs/edit/master/lectures/lecture2.ipynb"><button
                 type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
                 title="Edit this page"><i class="fas fa-pencil-alt"></i>suggest edit</button></a>
     </div>
@@ -181,7 +181,7 @@
         aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
     <div class="dropdown-buttons">
         
-        <a class="binder-button" href="https://mybinder.org/v2/gh/ggeorg02/BAIT580/master?urlpath=tree/lectures/lecture2.ipynb"><button type="button"
+        <a class="binder-button" href="https://mybinder.org/v2/gh/ggeorg02/cs/master?urlpath=tree/lectures/lecture2.ipynb"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
                 data-placement="left"><img class="binder-button-logo"
                     src="../_static/images/logo_binder.svg"
@@ -426,6 +426,10 @@
 </div>
 <div class="section" id="warm-up">
 <h2><span class="section-number">1.2. </span>Warm-up ☕️<a class="headerlink" href="#warm-up" title="Permalink to this headline">¶</a></h2>
+<div class="margin sidebar">
+<p class="sidebar-title"></p>
+<img alt="../_images/coffee.png" src="../_images/coffee.png" />
+</div>
 <div class="section" id="refresher-take-some-time-and-think-if-you-know">
 <h3><span class="section-number">1.2.1. </span>Refresher!! Take some time and think if you know…<a class="headerlink" href="#refresher-take-some-time-and-think-if-you-know" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
@@ -443,6 +447,114 @@
 <li><p>To create a table and various data types</p></li>
 <li><p>Integrity constraints such as primary key and foreign key</p></li>
 <li><p>Basic SQL commands like SELECT, FROM, and WHERE</p></li>
+</ul>
+</div>
+<div class="section" id="refresher-exercise">
+<h3><span class="section-number">1.2.2. </span>Refresher exercise<a class="headerlink" href="#refresher-exercise" title="Permalink to this headline">¶</a></h3>
+<p><em><strong>Question 1:</strong></em> In this table <code class="docutils literal notranslate"><span class="pre">eg</span></code></p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p>firstname</p></th>
+<th class="head"><p>countryfrom</p></th>
+<th class="head"><p>continent</p></th>
+<th class="head"><p>gender</p></th>
+<th class="head"><p>age</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>matt</p></td>
+<td><p>usa</p></td>
+<td><p>north america</p></td>
+<td><p>M</p></td>
+<td><p>23</p></td>
+</tr>
+<tr class="row-odd"><td><p>jenn</p></td>
+<td><p>uk</p></td>
+<td><p>europe</p></td>
+<td><p>F</p></td>
+<td><p>35</p></td>
+</tr>
+<tr class="row-even"><td><p>guy</p></td>
+<td><p>france</p></td>
+<td><p>europe</p></td>
+<td><p>M</p></td>
+<td><p>25</p></td>
+</tr>
+<tr class="row-odd"><td><p>james</p></td>
+<td><p>china</p></td>
+<td><p>asia</p></td>
+<td><p>M</p></td>
+<td><p>29</p></td>
+</tr>
+<tr class="row-even"><td><p>lida</p></td>
+<td><p>india</p></td>
+<td><p>asia</p></td>
+<td><p>F</p></td>
+<td><p>56</p></td>
+</tr>
+<tr class="row-odd"><td><p>linda</p></td>
+<td><p>canada</p></td>
+<td><p>north america</p></td>
+<td><p>F</p></td>
+<td><p>18</p></td>
+</tr>
+<tr class="row-even"><td><p>sofia</p></td>
+<td><p>germany</p></td>
+<td><p>europe</p></td>
+<td><p>F</p></td>
+<td><p>22</p></td>
+</tr>
+<tr class="row-odd"><td><p>george</p></td>
+<td><p>india</p></td>
+<td><p>asia</p></td>
+<td><p>M</p></td>
+<td><p>29</p></td>
+</tr>
+</tbody>
+</table>
+<p>What will be returned from following SQL</p>
+<div class="highlight-sql notranslate"><div class="highlight"><pre><span></span><span class="k">select</span> <span class="n">firstname</span><span class="p">,</span><span class="n">gender</span> <span class="k">from</span> <span class="n">eg</span> <span class="k">where</span> <span class="n">continent</span> <span class="o">=</span><span class="s1">&#39;asia&#39;</span> <span class="k">AND</span> <span class="n">age</span> <span class="o">=</span><span class="mi">29</span>
+</pre></div>
+</div>
+<p>A) george,M</p>
+<p>B) george,M,asia,29</p>
+<p>C) george,india,asia, M,29</p>
+<p>D) M,george</p>
+<p>E) M,james</p>
+<div class="toggle docutils container">
+<p><em><strong>Answer: D</strong></em></p>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>Remember the order of the columns returned will be based on the order of columns that we specify within the select statement.</p>
+</div>
+</div>
+<p><em><strong>Question 2:</strong></em> Consider a scenario where you want to perform analysis on a table (peopletable) with 100 columns (including personname,age,gender,origin…etc.) and millions of rows that define a person. You are interested in seeing the name of individuals older than 90. Which SQL query is more appropriate in this situation?</p>
+<p>A) <em><strong>select * from peopletable where age &gt; 90;</strong></em></p>
+<p>B) <em><strong>select personname,age from peopletable where age &gt; 90;</strong></em></p>
+<p>B) <em><strong>select personname,age,gender,origin from peopletable where age &lt; 90;</strong></em></p>
+<p>D) <em><strong>select personname from peopletable where age &gt; 90;</strong></em></p>
+<div class="toggle docutils container">
+<p><em><strong>Answer:  D</strong></em></p>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>Just bring the columns and rows that are needed. Even though <code class="docutils literal notranslate"><span class="pre">SELECT</span></code> and <code class="docutils literal notranslate"><span class="pre">WHERE</span></code> are very basic SQL commands, it’s crucial when you are dealing with a large table</p>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="learning-objectives">
+<h2><span class="section-number">1.3. </span>Learning objectives<a class="headerlink" href="#learning-objectives" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>You will be able to create SQL queries using (Lap 1 &amp; Lap 2)</p>
+<ul>
+<li><p>Distinct,</p></li>
+<li><p>ORDER BY,</p></li>
+<li><p>LIMIT,</p></li>
+<li><p>GROUP BY,</p></li>
+<li><p>alias AS</p></li>
+</ul>
+</li>
+<li><p>You will learn about different kinds of joins and be able to write SQL queries that perform <code class="docutils literal notranslate"><span class="pre">JOINS</span></code>. (Lap 3)</p></li>
 </ul>
 <p>In this class, we will be using the tables that we created in lecture 1. Here are the scripts if you want to recreate the classroom exercise table.</p>
 <div class="toggle docutils container">
@@ -524,114 +636,10 @@
 </div>
 </div>
 </div>
+<div class="margin sidebar">
+<p class="sidebar-title"></p>
+<img alt="../_images/start.png" src="../_images/start.png" />
 </div>
-<div class="section" id="refresher-exercise">
-<h3><span class="section-number">1.2.2. </span>Refresher exercise<a class="headerlink" href="#refresher-exercise" title="Permalink to this headline">¶</a></h3>
-<p><em><strong>Question 1:</strong></em> In this table <code class="docutils literal notranslate"><span class="pre">eg</span></code></p>
-<table class="colwidths-auto table">
-<thead>
-<tr class="row-odd"><th class="head"><p>firstname</p></th>
-<th class="head"><p>countryfrom</p></th>
-<th class="head"><p>continent</p></th>
-<th class="head"><p>gender</p></th>
-<th class="head"><p>age</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="row-even"><td><p>matt</p></td>
-<td><p>usa</p></td>
-<td><p>north america</p></td>
-<td><p>M</p></td>
-<td><p>23</p></td>
-</tr>
-<tr class="row-odd"><td><p>jenn</p></td>
-<td><p>uk</p></td>
-<td><p>europe</p></td>
-<td><p>F</p></td>
-<td><p>35</p></td>
-</tr>
-<tr class="row-even"><td><p>guy</p></td>
-<td><p>france</p></td>
-<td><p>europe</p></td>
-<td><p>M</p></td>
-<td><p>25</p></td>
-</tr>
-<tr class="row-odd"><td><p>james</p></td>
-<td><p>china</p></td>
-<td><p>asia</p></td>
-<td><p>M</p></td>
-<td><p>29</p></td>
-</tr>
-<tr class="row-even"><td><p>lida</p></td>
-<td><p>india</p></td>
-<td><p>asia</p></td>
-<td><p>F</p></td>
-<td><p>56</p></td>
-</tr>
-<tr class="row-odd"><td><p>linda</p></td>
-<td><p>canada</p></td>
-<td><p>north america</p></td>
-<td><p>F</p></td>
-<td><p>18</p></td>
-</tr>
-<tr class="row-even"><td><p>sofia</p></td>
-<td><p>germany</p></td>
-<td><p>europe</p></td>
-<td><p>F</p></td>
-<td><p>22</p></td>
-</tr>
-<tr class="row-odd"><td><p>george</p></td>
-<td><p>india</p></td>
-<td><p>asia</p></td>
-<td><p>M</p></td>
-<td><p>29</p></td>
-</tr>
-</tbody>
-</table>
-<p>What will be returned from following SQL</p>
-<div class="highlight-sql notranslate"><div class="highlight"><pre><span></span><span class="k">select</span> <span class="n">firstname</span><span class="p">,</span><span class="n">gender</span> <span class="k">from</span> <span class="n">eg</span> <span class="k">where</span> <span class="n">continent</span> <span class="o">=</span><span class="s1">&#39;asia&#39;</span> <span class="k">AND</span> <span class="n">age</span> <span class="o">=</span><span class="mi">29</span>
-</pre></div>
-</div>
-<p>A) george,M</p>
-<p>B) george,M,asia,29</p>
-<p>C) george,india,asia, M,29</p>
-<p>D) M,george</p>
-<p>E) M,james</p>
-<div class="toggle docutils container">
-<p><em><strong>Answer: D</strong></em></p>
-<div class="admonition important">
-<p class="admonition-title">Important</p>
-<p>Remember the order of the columns returned will be based on the order of columns that we specify within the select statement.</p>
-</div>
-</div>
-<p><em><strong>Question 2:</strong></em> Consider a scenario where you want to perform analysis on a table (peopletable) with 100 columns (including personname,age,gender,origin…etc.) that define a person. You are interested in seeing the name of individuals older than 90. Which SQL query is more appropriate in this situation?</p>
-<p>A) <em><strong>select * from peopletable where age &gt; 90;</strong></em></p>
-<p>B) <em><strong>select personname,age from peopletable where age &gt; 90;</strong></em></p>
-<p>B) <em><strong>select personname,age,gender,origin from peopletable where age &lt; 90;</strong></em></p>
-<p>D) <em><strong>select personname from peopletable where age &gt; 90;</strong></em></p>
-<div class="toggle docutils container">
-<p><em><strong>Answer:  D</strong></em></p>
-<div class="admonition important">
-<p class="admonition-title">Important</p>
-<p>Just bring the columns and rows that are needed. Even though <code class="docutils literal notranslate"><span class="pre">SELECT</span></code> and <code class="docutils literal notranslate"><span class="pre">WHERE</span></code> are very basic SQL commands, it’s crucial when you are dealing with a large table</p>
-</div>
-</div>
-</div>
-</div>
-<div class="section" id="learning-objectives">
-<h2><span class="section-number">1.3. </span>Learning objectives<a class="headerlink" href="#learning-objectives" title="Permalink to this headline">¶</a></h2>
-<ul class="simple">
-<li><p>You will be able to create SQL queries using (Lap 1 &amp; Lap 2)</p>
-<ul>
-<li><p>Distinct,</p></li>
-<li><p>ORDER BY,</p></li>
-<li><p>LIMIT,</p></li>
-<li><p>GROUP BY,</p></li>
-<li><p>alias AS</p></li>
-</ul>
-</li>
-<li><p>You will learn about different kinds of joins and be able to create SQL queries that perform <code class="docutils literal notranslate"><span class="pre">JOINS</span></code>. (Lap 3)</p></li>
-</ul>
 </div>
 <div class="section" id="lap-1">
 <h2><span class="section-number">1.4. </span>Lap 1 🥛<a class="headerlink" href="#lap-1" title="Permalink to this headline">¶</a></h2>
@@ -764,7 +772,7 @@ SELECT DISTINCT course_name, course_year FROM courses;
 <div class="section" id="order-by">
 <h3><span class="section-number">1.4.2. </span>ORDER BY<a class="headerlink" href="#order-by" title="Permalink to this headline">¶</a></h3>
 <p><code class="docutils literal notranslate"><span class="pre">ORDER</span> <span class="pre">BY</span></code> statement sorts the results returned by <code class="docutils literal notranslate"><span class="pre">SELECT</span></code> based on a sort expression.</p>
-<p>Syntax</p>
+<p><em><strong>Syntax:</strong></em></p>
 <div class="highlight-sql notranslate"><div class="highlight"><pre><span></span><span class="k">SELECT</span> <span class="n">column1</span><span class="p">,</span> <span class="n">column2</span> <span class="p">...</span><span class="n">columnN</span>
 <span class="k">FROM</span> <span class="k">table_name</span>
 <span class="k">ORDER</span> <span class="k">BY</span> <span class="n">column1</span> <span class="p">[</span><span class="k">ASC</span> <span class="o">|</span> <span class="k">DESC</span><span class="p">],</span> <span class="n">column2</span> <span class="p">[</span><span class="k">ASC</span> <span class="o">|</span> <span class="k">DESC</span><span class="p">]</span> <span class="p">....</span><span class="n">columnN</span> <span class="p">[</span><span class="k">ASC</span><span class="o">|</span><span class="k">DESC</span><span class="p">];</span>
@@ -1076,7 +1084,7 @@ ORDER BY course_year DESC;
 <div class="section" id="limit">
 <h3><span class="section-number">1.4.3. </span>LIMIT<a class="headerlink" href="#limit" title="Permalink to this headline">¶</a></h3>
 <p>Until now, we were returning everything that our SQL query returns. <code class="docutils literal notranslate"><span class="pre">LIMIT</span></code> statement is used to limit the number of rows that are returned.</p>
-<p>syntax:</p>
+<p><em><strong>Syntax:</strong></em></p>
 <div class="highlight-sql notranslate"><div class="highlight"><pre><span></span><span class="k">SELECT</span> <span class="n">column1</span><span class="p">,</span> <span class="n">column2</span><span class="p">,</span> <span class="p">...</span><span class="n">columnN</span>
 <span class="k">FROM</span> <span class="n">tablename</span>
 <span class="k">LIMIT</span> <span class="n">numberofrows</span><span class="p">;</span>
@@ -1093,7 +1101,9 @@ LIMIT 2;
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> * postgresql://postgres:***@postgres.cwq2624hiuap.us-west-2.rds.amazonaws.com:5432/postgres
-2 rows affected.
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2 rows affected.
 </pre></div>
 </div>
 <div class="output text_html"><table>
@@ -1144,7 +1154,9 @@ LIMIT 1;
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> * postgresql://postgres:***@postgres.cwq2624hiuap.us-west-2.rds.amazonaws.com:5432/postgres
-1 rows affected.
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1 rows affected.
 </pre></div>
 </div>
 <div class="output text_html"><table>
@@ -1224,7 +1236,6 @@ LIMIT 1;
 <li><p><code class="docutils literal notranslate"><span class="pre">ORDER</span> <span class="pre">BY</span></code> rows returned based on column(s)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">LIMIT</span></code> the number of rows returned</p></li>
 </ul>
-<p>Now we will learn some more advanced SQL operations to gain more insight into the data. But, before that, let’s do some exercise.</p>
 </div>
 <div class="section" id="check-point-1-exercise">
 <h3><span class="section-number">1.4.5. </span>Check point 1 exercise.<a class="headerlink" href="#check-point-1-exercise" title="Permalink to this headline">¶</a></h3>
@@ -1383,6 +1394,7 @@ ORDER BY course_percentage DESC</strong></em></p>
 </table>
 <p>So even though many of them use a combination of <code class="docutils literal notranslate"><span class="pre">ORDER</span> <span class="pre">BY</span></code> and <code class="docutils literal notranslate"><span class="pre">LIMIT</span></code> for these scenarios we might run into situations like this. There are a couple of ways to deal with these kinds of scenarios, and we will learn about <code class="docutils literal notranslate"><span class="pre">subquery</span></code> in our next class, which will help you capture ties.</p>
 </div>
+<p>Congratulations in finishing lap 1. In next lap we will learn some more advanced SQL operations to gain more insight into the data.</p>
 </div>
 </div>
 </div>
@@ -1522,7 +1534,7 @@ FROM courses
 <div class="section" id="grouping">
 <h3><span class="section-number">1.5.2. </span>Grouping<a class="headerlink" href="#grouping" title="Permalink to this headline">¶</a></h3>
 <p>The aggregations we learned in our previous session also become useful when using the <code class="docutils literal notranslate"><span class="pre">GROUP</span> <span class="pre">BY</span></code> statement. <code class="docutils literal notranslate"><span class="pre">GROUP</span> <span class="pre">BY</span></code> statement divides a table into groups of rows based on the values of one or more columns. Once this grouping is done, you can apply your aggregation to these groups.</p>
-<p>Syntax:</p>
+<p><em><strong>Syntax:</strong></em></p>
 <div class="highlight-sql notranslate"><div class="highlight"><pre><span></span><span class="k">SELECT</span>
     <span class="n">grouping_columns</span><span class="p">,</span> <span class="n">aggregated_columns</span>
 <span class="k">FROM</span>
@@ -1748,8 +1760,7 @@ group by course_name;
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%</span><span class="k">sql</span>
 select course_name, course_year,AVG(course_percentage) 
 FROM courses
-group by course_name, course_year
-having AVG(course_percentage) &lt;90 ;
+group by course_name, course_year;
 </pre></div>
 </div>
 </div>
@@ -1757,7 +1768,7 @@ having AVG(course_percentage) &lt;90 ;
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> * postgresql://postgres:***@postgres.cwq2624hiuap.us-west-2.rds.amazonaws.com:5432/postgres
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>8 rows affected.
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>11 rows affected.
 </pre></div>
 </div>
 <div class="output text_html"><table>
@@ -1778,6 +1789,21 @@ having AVG(course_percentage) &lt;90 ;
             <td>C programming</td>
             <td>2019</td>
             <td>87.0</td>
+        </tr>
+        <tr>
+            <td>TPCS INFO TECH</td>
+            <td>2019</td>
+            <td>94.66666666666667</td>
+        </tr>
+        <tr>
+            <td>Spark Programming</td>
+            <td>2019</td>
+            <td>91.5</td>
+        </tr>
+        <tr>
+            <td>Web and Cloud Computing</td>
+            <td>2019</td>
+            <td>91.0</td>
         </tr>
         <tr>
             <td>Health and Technology</td>
@@ -1816,7 +1842,7 @@ having AVG(course_percentage) &lt;90 ;
 </div>
 <div class="section" id="having">
 <h3><span class="section-number">1.5.3. </span>HAVING<a class="headerlink" href="#having" title="Permalink to this headline">¶</a></h3>
-<p>Syntax:</p>
+<p><em><strong>Syntax:</strong></em></p>
 <div class="highlight-sql notranslate"><div class="highlight"><pre><span></span><span class="k">SELECT</span>
     <span class="n">grouping_columns</span><span class="p">,</span> <span class="n">aggregated_columns</span>
 <span class="k">FROM</span>
@@ -1892,7 +1918,7 @@ having AVG(course_percentage) &lt;90 ;
 <div class="section" id="using-alias-as">
 <h3><span class="section-number">1.5.4. </span>Using alias (AS)<a class="headerlink" href="#using-alias-as" title="Permalink to this headline">¶</a></h3>
 <p>Until now, we have been referring tables as table names and columns as column names from the schema. But when writing SQL, we are not required to use the same column and table names as in the schema. Instead, we can create aliases for a column or a table using the keyword <code class="docutils literal notranslate"><span class="pre">AS</span></code>.</p>
-<p>Syntax:</p>
+<p><em><strong>Syntax:</strong></em></p>
 <div class="highlight-sql notranslate"><div class="highlight"><pre><span></span><span class="k">SELECT</span>
     <span class="n">column1</span> <span class="p">[</span><span class="k">AS</span><span class="p">]</span> <span class="n">c1</span><span class="p">,</span>
     <span class="n">column2</span> <span class="p">[</span><span class="k">AS</span><span class="p">]</span> <span class="n">c2</span>
@@ -1904,7 +1930,7 @@ having AVG(course_percentage) &lt;90 ;
 <ul class="simple">
 <li><p>This makes code more readable</p></li>
 <li><p>You can return the columns with a more meaningful name</p></li>
-<li><p>Helps a lot when we do JOINS ( wait for the next topic)</p></li>
+<li><p>Helps a lot when we do JOINS (wait for the next topic)</p></li>
 </ul>
 <p>Let’s rewrite our previous query using AS</p>
 <div class="cell docutils container">
@@ -2209,7 +2235,7 @@ group by course_name;</strong></em></p>
 <h2><span class="section-number">1.6. </span>Lap 3 🧃<a class="headerlink" href="#lap-3" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="join">
 <h3><span class="section-number">1.6.1. </span>Join<a class="headerlink" href="#join" title="Permalink to this headline">¶</a></h3>
-<p>Syntax:</p>
+<p><em><strong>Syntax:</strong></em></p>
 <div class="highlight-sql notranslate"><div class="highlight"><pre><span></span><span class="k">SELECT</span>
     <span class="n">columns</span>
 <span class="k">FROM</span>
@@ -2242,7 +2268,9 @@ CROSS JOIN
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> * postgresql://postgres:***@postgres.cwq2624hiuap.us-west-2.rds.amazonaws.com:5432/postgres
-153 rows affected.
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>153 rows affected.
 </pre></div>
 </div>
 <div class="output text_html"><table>
@@ -3954,6 +3982,8 @@ CROSS JOIN
 <div class="section" id="inner-join">
 <h3><span class="section-number">1.6.3. </span>Inner join<a class="headerlink" href="#inner-join" title="Permalink to this headline">¶</a></h3>
 <p>Inner join only returns the matching rows from the left and right tables.</p>
+<p>If you think about it from a Venn diagram perspective, it will look like…</p>
+<a class="reference internal image-reference" href="../_images/inner.png"><img alt="../_images/inner.png" src="../_images/inner.png" style="width: 40%;" /></a>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%</span><span class="k">sql</span>
@@ -4652,6 +4682,10 @@ WHERE c.student_no is NULL</p>
 </div>
 <div class="section" id="finish-line">
 <h2><span class="section-number">1.7. </span>🏁 Finish line 🏁 🍺<a class="headerlink" href="#finish-line" title="Permalink to this headline">¶</a></h2>
+<div class="margin sidebar">
+<p class="sidebar-title"></p>
+<img alt="../_images/done.png" src="../_images/done.png" />
+</div>
 <p>Are you able to recollect our 3 checkpoints?</p>
 <ul class="simple">
 <li><p><em><strong>Checkpoint 1:</strong></em> Take some time and think if you can…</p>
@@ -4688,7 +4722,7 @@ WHERE c.student_no is NULL</p>
     {
         requestKernel: true,
         binderOptions: {
-            repo: "ggeorg02/BAIT580",
+            repo: "ggeorg02/cs",
             ref: "master",
         },
         codeMirrorConfig: {
