@@ -16,6 +16,9 @@
 # - Summary (finish line)
 # 
 # ## Warm-up ☕️
+# ```{margin}
+# <img src = 'img/coffee.png'>
+# ```
 # ### Refresher!! Take some time and think if you know...
 # 
 # - What are databases?
@@ -29,7 +32,71 @@
 # - To create a table and various data types 
 # - Integrity constraints such as primary key and foreign key
 # - Basic SQL commands like SELECT, FROM, and WHERE
+
+# ### Refresher exercise 
 # 
+# ***Question 1:*** In this table `eg`
+# 
+# | firstname | countryfrom | continent     | gender | age |
+# |-----------|-------------|---------------|--------|-----|
+# | matt      | usa         | north america | M      | 23  |
+# | jenn      | uk          | europe        | F      | 35  |
+# | guy       | france      | europe        | M      | 25  |
+# | james     | china       | asia          | M      | 29  |
+# | lida      | india       | asia          | F      | 56  |
+# | linda     | canada      | north america | F      | 18  |
+# | sofia     | germany     | europe        | F      | 22  |
+# | george    | india       | asia          | M      | 29  |
+# 
+# What will be returned from following SQL 
+# ```sql
+# select firstname,gender from eg where continent ='asia' AND age =29
+# ```
+# A) george,M
+# 
+# B) george,M,asia,29
+# 
+# C) george,india,asia, M,29 
+# 
+# D) M,george
+# 
+# E) M,james
+# 
+# ```{toggle}
+# 
+# ***Answer: D***
+# 
+# ```{important}
+# Remember the order of the columns returned will be based on the order of columns that we specify within the select statement.
+# ```
+
+# ***Question 2:*** Consider a scenario where you want to perform analysis on a table (peopletable) with 100 columns (including personname,age,gender,origin...etc.) and millions of rows that define a person. You are interested in seeing the name of individuals older than 90. Which SQL query is more appropriate in this situation?
+# 
+# A) ***select * from peopletable where age > 90;***
+# 
+# B) ***select personname,age from peopletable where age > 90;***
+# 
+# B) ***select personname,age,gender,origin from peopletable where age < 90;***
+# 
+# D) ***select personname from peopletable where age > 90;***
+# 
+# ```{toggle}
+# 
+# ***Answer:  D***
+# 
+# ```{important}
+# Just bring the columns and rows that are needed. Even though `SELECT` and `WHERE` are very basic SQL commands, it's crucial when you are dealing with a large table
+# ```
+
+# ## Learning objectives
+# - You will be able to create SQL queries using (Lap 1 & Lap 2)
+#     - Distinct, 
+#     - ORDER BY, 
+#     - LIMIT, 
+#     - GROUP BY, 
+#     - alias AS
+# - You will learn about different kinds of joins and be able to write SQL queries that perform `JOINS`. (Lap 3)
+
 # In this class, we will be using the tables that we created in lecture 1. Here are the scripts if you want to recreate the classroom exercise table.
 # 
 # ```{toggle}
@@ -105,70 +172,9 @@ get_ipython().run_line_magic('load_ext', 'sql')
 get_ipython().run_line_magic('sql', 'postgresql://{user}:{password}@{host}:5432/postgres')
 
 
-# ### Refresher exercise 
-# 
-# ***Question 1:*** In this table `eg`
-# 
-# | firstname | countryfrom | continent     | gender | age |
-# |-----------|-------------|---------------|--------|-----|
-# | matt      | usa         | north america | M      | 23  |
-# | jenn      | uk          | europe        | F      | 35  |
-# | guy       | france      | europe        | M      | 25  |
-# | james     | china       | asia          | M      | 29  |
-# | lida      | india       | asia          | F      | 56  |
-# | linda     | canada      | north america | F      | 18  |
-# | sofia     | germany     | europe        | F      | 22  |
-# | george    | india       | asia          | M      | 29  |
-# 
-# What will be returned from following SQL 
-# ```sql
-# select firstname,gender from eg where continent ='asia' AND age =29
+# ```{margin}
+# <img src = 'img/start.png'>
 # ```
-# A) george,M
-# 
-# B) george,M,asia,29
-# 
-# C) george,india,asia, M,29 
-# 
-# D) M,george
-# 
-# E) M,james
-# 
-# ```{toggle}
-# 
-# ***Answer: D***
-# 
-# ```{important}
-# Remember the order of the columns returned will be based on the order of columns that we specify within the select statement.
-# ```
-
-# ***Question 2:*** Consider a scenario where you want to perform analysis on a table (peopletable) with 100 columns (including personname,age,gender,origin...etc.) that define a person. You are interested in seeing the name of individuals older than 90. Which SQL query is more appropriate in this situation?
-# 
-# A) ***select * from peopletable where age > 90;***
-# 
-# B) ***select personname,age from peopletable where age > 90;***
-# 
-# B) ***select personname,age,gender,origin from peopletable where age < 90;***
-# 
-# D) ***select personname from peopletable where age > 90;***
-# 
-# ```{toggle}
-# 
-# ***Answer:  D***
-# 
-# ```{important}
-# Just bring the columns and rows that are needed. Even though `SELECT` and `WHERE` are very basic SQL commands, it's crucial when you are dealing with a large table
-# ```
-
-# ## Learning objectives
-# - You will be able to create SQL queries using (Lap 1 & Lap 2)
-#     - Distinct, 
-#     - ORDER BY, 
-#     - LIMIT, 
-#     - GROUP BY, 
-#     - alias AS
-# - You will learn about different kinds of joins and be able to create SQL queries that perform `JOINS`. (Lap 3)
-
 # ## Lap 1 🥛
 # ### DISTINCT
 # 
@@ -199,7 +205,7 @@ get_ipython().run_cell_magic('sql', '', 'SELECT DISTINCT course_name, course_yea
 # 
 # `ORDER BY` statement sorts the results returned by `SELECT` based on a sort expression.
 # 
-# Syntax
+# ***Syntax:***
 # ```sql
 # SELECT column1, column2 ...columnN
 # FROM table_name
@@ -226,7 +232,7 @@ get_ipython().run_cell_magic('sql', '', 'SELECT * \nFROM courses\nORDER BY cours
 # 
 # Until now, we were returning everything that our SQL query returns. `LIMIT` statement is used to limit the number of rows that are returned. 
 # 
-# syntax:
+# ***Syntax:***
 # 
 # ```sql
 # SELECT column1, column2, ...columnN
@@ -268,8 +274,6 @@ get_ipython().run_line_magic('sql', 'select age from eg order by age')
 # - Return `DISTINCT` elements
 # - `ORDER BY` rows returned based on column(s)
 # - `LIMIT` the number of rows returned
-# 
-# Now we will learn some more advanced SQL operations to gain more insight into the data. But, before that, let's do some exercise. 
 
 # ### Check point 1 exercise.
 # 
@@ -357,6 +361,8 @@ get_ipython().run_line_magic('sql', 'select age from eg order by age')
 # 
 # So even though many of them use a combination of `ORDER BY` and `LIMIT` for these scenarios we might run into situations like this. There are a couple of ways to deal with these kinds of scenarios, and we will learn about `subquery` in our next class, which will help you capture ties.
 
+# Congratulations in finishing lap 1. In next lap we will learn some more advanced SQL operations to gain more insight into the data.
+
 # ## Lap 2 🧋
 # ### Aggregations
 # 
@@ -416,7 +422,7 @@ get_ipython().run_cell_magic('sql', '', 'select AVG(course_percentage) \nFROM co
 # 
 # The aggregations we learned in our previous session also become useful when using the `GROUP BY` statement. `GROUP BY` statement divides a table into groups of rows based on the values of one or more columns. Once this grouping is done, you can apply your aggregation to these groups.
 # 
-# Syntax:
+# ***Syntax:***
 # ```sql
 # SELECT
 #     grouping_columns, aggregated_columns
@@ -445,14 +451,14 @@ get_ipython().run_cell_magic('sql', '', 'select course_name, AVG(course_percenta
 # In[16]:
 
 
-get_ipython().run_cell_magic('sql', '', 'select course_name, course_year,AVG(course_percentage) \nFROM courses\ngroup by course_name, course_year\nhaving AVG(course_percentage) <90 ;')
+get_ipython().run_cell_magic('sql', '', 'select course_name, course_year,AVG(course_percentage) \nFROM courses\ngroup by course_name, course_year;')
 
 
 # Now, what if I want to see only the courses with an average of less than 90 %? We mentioned before that this kind of filtering (filtering on the aggregation function) is not possible using `WHERE` statement, and that's why we want the `HAVING` statement to do filtering using these aggregated values.
 # 
 # ### HAVING
 # 
-# Syntax:
+# ***Syntax:***
 # ```sql
 # SELECT
 #     grouping_columns, aggregated_columns
@@ -484,7 +490,7 @@ get_ipython().run_cell_magic('sql', '', 'select course_name, AVG(course_percenta
 # 
 # Until now, we have been referring tables as table names and columns as column names from the schema. But when writing SQL, we are not required to use the same column and table names as in the schema. Instead, we can create aliases for a column or a table using the keyword `AS`.
 # 
-# Syntax:
+# ***Syntax:***
 # ```sql
 # SELECT
 #     column1 [AS] c1,
@@ -496,7 +502,7 @@ get_ipython().run_cell_magic('sql', '', 'select course_name, AVG(course_percenta
 # It's entirely optional to use AS, but WHY do we want it? 
 # - This makes code more readable
 # - You can return the columns with a more meaningful name 
-# - Helps a lot when we do JOINS ( wait for the next topic)
+# - Helps a lot when we do JOINS (wait for the next topic)
 # 
 # Let's rewrite our previous query using AS
 
@@ -613,7 +619,7 @@ get_ipython().run_cell_magic('sql', '', 'SELECT *\nFROM courses;')
 # ## Lap 3 🧃
 # ### Join
 # 
-# Syntax:
+# ***Syntax:***
 # ```sql
 # SELECT
 #     columns
@@ -642,6 +648,10 @@ get_ipython().run_cell_magic('sql', '', '\nSELECT\n    *\nFROM\n    students\nCR
 # ### Inner join
 # 
 # Inner join only returns the matching rows from the left and right tables.
+# 
+# If you think about it from a Venn diagram perspective, it will look like...
+# 
+# <img src ='img/inner.png' width="40%"/>
 
 # In[21]:
 
@@ -800,7 +810,9 @@ get_ipython().run_cell_magic('sql', '', "select s.stud_name,c.course_name, c.cou
 # ```
 
 # ## 🏁 Finish line 🏁 🍺
-# 
+# ```{margin}
+# <img src = 'img/done.png'>
+# ```
 # Are you able to recollect our 3 checkpoints?
 # 
 # - ***Checkpoint 1:*** Take some time and think if you can...
