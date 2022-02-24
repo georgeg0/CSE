@@ -645,13 +645,86 @@
 <h2><span class="section-number">1.4. </span>Lap 1 🥛<a class="headerlink" href="#lap-1" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="distinct">
 <h3><span class="section-number">1.4.1. </span>DISTINCT<a class="headerlink" href="#distinct" title="Permalink to this headline">¶</a></h3>
-<p>The DISTINCT statement is used only to return distinct elements from a table.</p>
-<p><em><strong>Syntax:</strong></em></p>
+<p>The DISTINCT statement is used only to return distinct elements from a table.
+<em><strong>Syntax:</strong></em></p>
 <div class="highlight-sql notranslate"><div class="highlight"><pre><span></span><span class="k">SELECT</span> <span class="k">DISTINCT</span> <span class="n">column1</span><span class="p">,</span> <span class="n">column2</span><span class="p">,</span> <span class="p">...</span><span class="n">columnN</span>
 <span class="k">FROM</span> <span class="n">tablename</span><span class="p">;</span>
 </pre></div>
 </div>
 <p><code class="docutils literal notranslate"><span class="pre">DISTINCT</span></code> is applied to all columns that follows the <code class="docutils literal notranslate"><span class="pre">DISTINCT</span></code> keyword. Say for eg if we give <code class="docutils literal notranslate"><span class="pre">DISTINCT</span> <span class="pre">column1,</span> <span class="pre">column2</span></code> then the combination of values in both <code class="docutils literal notranslate"><span class="pre">column1</span></code> and <code class="docutils literal notranslate"><span class="pre">column2</span></code> columns will be used for returning the unique combination (or removing the duplicate elements).</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%</span><span class="k">sql</span>
+SELECT course_name FROM courses;
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> * postgresql://postgres:***@postgres.cwq2624hiuap.us-west-2.rds.amazonaws.com:5432/postgres
+17 rows affected.
+</pre></div>
+</div>
+<div class="output text_html"><table>
+    <thead>
+        <tr>
+            <th>course_name</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>TPCS INFO TECH</td>
+        </tr>
+        <tr>
+            <td>Data Visualization</td>
+        </tr>
+        <tr>
+            <td>Health and Technology</td>
+        </tr>
+        <tr>
+            <td>Web and Cloud Computing</td>
+        </tr>
+        <tr>
+            <td>Spark Programming</td>
+        </tr>
+        <tr>
+            <td>Parallel Computing</td>
+        </tr>
+        <tr>
+            <td>Large Scale Infrastructures</td>
+        </tr>
+        <tr>
+            <td>TPCS INFO TECH</td>
+        </tr>
+        <tr>
+            <td>TPCS INFO TECH</td>
+        </tr>
+        <tr>
+            <td>Health and Technology</td>
+        </tr>
+        <tr>
+            <td>Data Visualization</td>
+        </tr>
+        <tr>
+            <td>Parallel Computing</td>
+        </tr>
+        <tr>
+            <td>Spark Programming</td>
+        </tr>
+        <tr>
+            <td>TPCS INFO TECH</td>
+        </tr>
+        <tr>
+            <td>Data Visualization</td>
+        </tr>
+        <tr>
+            <td>C programming</td>
+        </tr>
+        <tr>
+            <td>Introduction to Genomics</td>
+        </tr>
+    </tbody>
+</table></div></div>
+</div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%</span><span class="k">sql</span>
@@ -710,7 +783,9 @@ SELECT DISTINCT course_name, course_year FROM courses;
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> * postgresql://postgres:***@postgres.cwq2624hiuap.us-west-2.rds.amazonaws.com:5432/postgres
-11 rows affected.
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>11 rows affected.
 </pre></div>
 </div>
 <div class="output text_html"><table>
@@ -1101,7 +1176,9 @@ LIMIT 2;
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> * postgresql://postgres:***@postgres.cwq2624hiuap.us-west-2.rds.amazonaws.com:5432/postgres
-2 rows affected.
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2 rows affected.
 </pre></div>
 </div>
 <div class="output text_html"><table>
@@ -1152,7 +1229,9 @@ LIMIT 1;
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> * postgresql://postgres:***@postgres.cwq2624hiuap.us-west-2.rds.amazonaws.com:5432/postgres
-1 rows affected.
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1 rows affected.
 </pre></div>
 </div>
 <div class="output text_html"><table>
@@ -1432,7 +1511,9 @@ SELECT COUNT(course_name) FROM courses;
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> * postgresql://postgres:***@postgres.cwq2624hiuap.us-west-2.rds.amazonaws.com:5432/postgres
-1 rows affected.
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1 rows affected.
 </pre></div>
 </div>
 <div class="output text_html"><table>
@@ -1458,7 +1539,9 @@ SELECT COUNT(DISTINCT course_name) FROM courses;
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> * postgresql://postgres:***@postgres.cwq2624hiuap.us-west-2.rds.amazonaws.com:5432/postgres
-1 rows affected.
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1 rows affected.
 </pre></div>
 </div>
 <div class="output text_html"><table>
@@ -1694,9 +1777,7 @@ group by course_name;
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> * postgresql://postgres:***@postgres.cwq2624hiuap.us-west-2.rds.amazonaws.com:5432/postgres
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>9 rows affected.
+9 rows affected.
 </pre></div>
 </div>
 <div class="output text_html"><table>
@@ -2258,7 +2339,9 @@ CROSS JOIN
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> * postgresql://postgres:***@postgres.cwq2624hiuap.us-west-2.rds.amazonaws.com:5432/postgres
-153 rows affected.
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>153 rows affected.
 </pre></div>
 </div>
 <div class="output text_html"><table>
@@ -3972,6 +4055,8 @@ CROSS JOIN
 <p>Inner join only returns the matching rows from the left and right tables.</p>
 <p>If you think about it from a Venn diagram perspective, it will look like…</p>
 <a class="reference internal image-reference" href="../_images/inner.png"><img alt="../_images/inner.png" src="../_images/inner.png" style="width: 40%;" /></a>
+<p>Just to examine. Here are the table that we are querying on
+<a class="reference internal" href="../_images/tables.png"><img alt="../_images/tables.png" src="../_images/tables.png" style="width: 70%;" /></a></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%</span><span class="k">sql</span>
@@ -4130,7 +4215,9 @@ ON
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> * postgresql://postgres:***@postgres.cwq2624hiuap.us-west-2.rds.amazonaws.com:5432/postgres
-16 rows affected.
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>16 rows affected.
 </pre></div>
 </div>
 <div class="output text_html"><table>
@@ -4391,6 +4478,8 @@ ON
 <p>It retrieves matching and non-matching rows from both tables.</p>
 <p>If you think about it from a Venn diagram perspective, it will look like.</p>
 <a class="reference internal image-reference" href="../_images/full.png"><img alt="../_images/full.png" src="../_images/full.png" style="width: 40%;" /></a>
+<p>Just to examine. Here are the table that we are querying on
+<a class="reference internal" href="../_images/tables.png"><img alt="../_images/tables.png" src="../_images/tables.png" style="width: 70%;" /></a></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%</span><span class="k">sql</span>
@@ -4407,7 +4496,9 @@ ON
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> * postgresql://postgres:***@postgres.cwq2624hiuap.us-west-2.rds.amazonaws.com:5432/postgres
-18 rows affected.
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>18 rows affected.
 </pre></div>
 </div>
 <div class="output text_html"><table>
@@ -4556,7 +4647,9 @@ ORDER BY course_year DESC;
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> * postgresql://postgres:***@postgres.cwq2624hiuap.us-west-2.rds.amazonaws.com:5432/postgres
-3 rows affected.
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>3 rows affected.
 </pre></div>
 </div>
 <div class="output text_html"><table>
