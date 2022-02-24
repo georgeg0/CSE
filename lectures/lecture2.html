@@ -269,8 +269,8 @@
       </a>
      </li>
      <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#reasoning-question">
-       1.4.5.2. Reasoning Question
+      <a class="reference internal nav-link" href="#reasoning-question-optional">
+       1.4.5.2. Reasoning Question (optional)
       </a>
      </li>
     </ul>
@@ -319,7 +319,7 @@
      </li>
      <li class="toc-h4 nav-item toc-entry">
       <a class="reference internal nav-link" href="#id2">
-       1.5.6.2. Reasoning Question
+       1.5.6.2. Reasoning Question (optional)
       </a>
      </li>
     </ul>
@@ -337,55 +337,55 @@
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#cross-join">
-     1.6.2. Cross join
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#inner-join">
-     1.6.3. Inner join
+     1.6.2. Inner join
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#outer-join">
-     1.6.4. Outer join
+     1.6.3. Outer join
     </a>
     <ul class="nav section-nav flex-column">
      <li class="toc-h4 nav-item toc-entry">
       <a class="reference internal nav-link" href="#left-outer">
-       1.6.4.1. Left outer
+       1.6.3.1. Left outer
       </a>
      </li>
      <li class="toc-h4 nav-item toc-entry">
       <a class="reference internal nav-link" href="#right-outer">
-       1.6.4.2. Right outer
+       1.6.3.2. Right outer
       </a>
      </li>
      <li class="toc-h4 nav-item toc-entry">
       <a class="reference internal nav-link" href="#full-outer">
-       1.6.4.3. Full outer
+       1.6.3.3. Full outer
       </a>
      </li>
     </ul>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#summarize">
-     1.6.5. Summarize:
+     1.6.4. Summarize:
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#checkpoint-3-take-some-time-and-think-if-you-can">
-     1.6.6. Checkpoint 3 !! Take some time and think if you can…
+     1.6.5. Checkpoint 3 !! Take some time and think if you can…
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#check-point-3-exercise">
-     1.6.7. Check point 3 exercise.
+     1.6.6. Check point 3 exercise.
     </a>
     <ul class="nav section-nav flex-column">
      <li class="toc-h4 nav-item toc-entry">
       <a class="reference internal nav-link" href="#id3">
-       1.6.7.1. iclicker questions
+       1.6.6.1. iclicker questions
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#id4">
+       1.6.6.2. Reasoning Question (optional)
       </a>
      </li>
     </ul>
@@ -1399,8 +1399,8 @@ LIMIT 1;
 <p><em><strong>Answer: B</strong></em></p>
 </div>
 </div>
-<div class="section" id="reasoning-question">
-<h4><span class="section-number">1.4.5.2. </span>Reasoning Question<a class="headerlink" href="#reasoning-question" title="Permalink to this headline">¶</a></h4>
+<div class="section" id="reasoning-question-optional">
+<h4><span class="section-number">1.4.5.2. </span>Reasoning Question (optional)<a class="headerlink" href="#reasoning-question-optional" title="Permalink to this headline">¶</a></h4>
 <p><em><strong>Question 1:</strong></em> Write a SQL query to list the row that got the highest <code class="docutils literal notranslate"><span class="pre">course_percentage</span></code> for the <code class="docutils literal notranslate"><span class="pre">TPCS</span> <span class="pre">INFO</span> <span class="pre">TECH'</span></code> course. Can you spot any issues by examining the original table?</p>
 <div class="toggle docutils container">
 <p>You probably might have got this SQL query by changing the SQL query that we discussed for the “Data Visualization” course.</p>
@@ -1777,7 +1777,9 @@ group by course_name;
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> * postgresql://postgres:***@postgres.cwq2624hiuap.us-west-2.rds.amazonaws.com:5432/postgres
-9 rows affected.
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>9 rows affected.
 </pre></div>
 </div>
 <div class="output text_html"><table>
@@ -1839,7 +1841,9 @@ group by course_name, course_year;
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> * postgresql://postgres:***@postgres.cwq2624hiuap.us-west-2.rds.amazonaws.com:5432/postgres
-11 rows affected.
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>11 rows affected.
 </pre></div>
 </div>
 <div class="output text_html"><table>
@@ -2233,7 +2237,6 @@ FROM courses;
 </ul>
 </li>
 </ul>
-<p>Until now, you deal with queries on a single table. What if we are interested in data from another table as well? For example, I am interested in seeing the course details (from the <code class="docutils literal notranslate"><span class="pre">courses</span></code> table) and the students (from the <code class="docutils literal notranslate"><span class="pre">students</span></code> table) related to those courses. In these situations, we use joins. Let’s learn how to stitch tables together. Before that, let’s do some exercise…</p>
 </div>
 <div class="section" id="check-point-2-exercise">
 <h3><span class="section-number">1.5.6. </span>Check point 2 exercise.<a class="headerlink" href="#check-point-2-exercise" title="Permalink to this headline">¶</a></h3>
@@ -2281,7 +2284,7 @@ FROM courses;
 </div>
 </div>
 <div class="section" id="id2">
-<h4><span class="section-number">1.5.6.2. </span>Reasoning Question<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h4>
+<h4><span class="section-number">1.5.6.2. </span>Reasoning Question (optional)<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h4>
 <p><em><strong>Question 1:</strong></em> We learned the <code class="docutils literal notranslate"><span class="pre">GROUP</span> <span class="pre">BY</span></code> clause, and we used it with aggregate functions. Using table <code class="docutils literal notranslate"><span class="pre">courses</span></code>, write a SQL query using <code class="docutils literal notranslate"><span class="pre">GROUP</span> <span class="pre">BY</span></code> without any aggregation function. Write your findings and learnings.</p>
 <div class="toggle docutils container">
 <p>You must have tried a variety of SQL queries and got into error;</p>
@@ -2299,6 +2302,7 @@ group by course_name;</strong></em></p>
 <p>In an aggregation query, the unaggregated expressions need to be consistent with the <code class="docutils literal notranslate"><span class="pre">GROUP</span> <span class="pre">BY</span></code> expressions. And all other expressions need to use aggregation functions</p>
 </div>
 </div>
+<p>Until now, you deal with queries on a single table. What if we are interested in data from another table as well? For example, I am interested in seeing the course details (from the <code class="docutils literal notranslate"><span class="pre">courses</span></code> table) and the students (from the <code class="docutils literal notranslate"><span class="pre">students</span></code> table) related to those courses. In these situations, we use joins. Let’s learn how to stitch tables together. Before that, let’s do some exercise…</p>
 </div>
 </div>
 </div>
@@ -2320,1738 +2324,8 @@ group by course_name;</strong></em></p>
 </div>
 <p>Following are the types of joins</p>
 </div>
-<div class="section" id="cross-join">
-<h3><span class="section-number">1.6.2. </span>Cross join<a class="headerlink" href="#cross-join" title="Permalink to this headline">¶</a></h3>
-<p>This is the simplest way of performing a join by cross joining 2 tables (like the cartesian product from your relational algebra classes), in our case, table <code class="docutils literal notranslate"><span class="pre">students</span></code> and <code class="docutils literal notranslate"><span class="pre">courses</span></code>. This kind of join returns all possible combinations of rows from <code class="docutils literal notranslate"><span class="pre">students</span></code> and <code class="docutils literal notranslate"><span class="pre">courses</span></code>.</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%</span><span class="k">sql</span>
-
-SELECT
-    *
-FROM
-    students
-CROSS JOIN
-    courses
-;
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> * postgresql://postgres:***@postgres.cwq2624hiuap.us-west-2.rds.amazonaws.com:5432/postgres
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>153 rows affected.
-</pre></div>
-</div>
-<div class="output text_html"><table>
-    <thead>
-        <tr>
-            <th>student_no</th>
-            <th>stud_name</th>
-            <th>age</th>
-            <th>major</th>
-            <th>id</th>
-            <th>student_no_1</th>
-            <th>course_name</th>
-            <th>course_year</th>
-            <th>course_percentage</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td>111</td>
-            <td>Catherine</td>
-            <td>23</td>
-            <td>MBAN</td>
-            <td>1</td>
-            <td>111</td>
-            <td>TPCS INFO TECH</td>
-            <td>2019</td>
-            <td>88.0</td>
-        </tr>
-        <tr>
-            <td>222</td>
-            <td>Tiff</td>
-            <td>28</td>
-            <td>MDS</td>
-            <td>1</td>
-            <td>111</td>
-            <td>TPCS INFO TECH</td>
-            <td>2019</td>
-            <td>88.0</td>
-        </tr>
-        <tr>
-            <td>333</td>
-            <td>John</td>
-            <td>23</td>
-            <td>MBAN</td>
-            <td>1</td>
-            <td>111</td>
-            <td>TPCS INFO TECH</td>
-            <td>2019</td>
-            <td>88.0</td>
-        </tr>
-        <tr>
-            <td>444</td>
-            <td>Amir</td>
-            <td>28</td>
-            <td>MBAN</td>
-            <td>1</td>
-            <td>111</td>
-            <td>TPCS INFO TECH</td>
-            <td>2019</td>
-            <td>88.0</td>
-        </tr>
-        <tr>
-            <td>555</td>
-            <td>Gittu</td>
-            <td>20</td>
-            <td>MDS</td>
-            <td>1</td>
-            <td>111</td>
-            <td>TPCS INFO TECH</td>
-            <td>2019</td>
-            <td>88.0</td>
-        </tr>
-        <tr>
-            <td>666</td>
-            <td>Isha</td>
-            <td>30</td>
-            <td>MBAN</td>
-            <td>1</td>
-            <td>111</td>
-            <td>TPCS INFO TECH</td>
-            <td>2019</td>
-            <td>88.0</td>
-        </tr>
-        <tr>
-            <td>777</td>
-            <td>Heidy</td>
-            <td>30</td>
-            <td>MBAN</td>
-            <td>1</td>
-            <td>111</td>
-            <td>TPCS INFO TECH</td>
-            <td>2019</td>
-            <td>88.0</td>
-        </tr>
-        <tr>
-            <td>888</td>
-            <td>Angela</td>
-            <td>27</td>
-            <td>MBAN</td>
-            <td>1</td>
-            <td>111</td>
-            <td>TPCS INFO TECH</td>
-            <td>2019</td>
-            <td>88.0</td>
-        </tr>
-        <tr>
-            <td>999</td>
-            <td>Jason</td>
-            <td>30</td>
-            <td>MBAN</td>
-            <td>1</td>
-            <td>111</td>
-            <td>TPCS INFO TECH</td>
-            <td>2019</td>
-            <td>88.0</td>
-        </tr>
-        <tr>
-            <td>111</td>
-            <td>Catherine</td>
-            <td>23</td>
-            <td>MBAN</td>
-            <td>2</td>
-            <td>111</td>
-            <td>Data Visualization</td>
-            <td>2019</td>
-            <td>88.0</td>
-        </tr>
-        <tr>
-            <td>222</td>
-            <td>Tiff</td>
-            <td>28</td>
-            <td>MDS</td>
-            <td>2</td>
-            <td>111</td>
-            <td>Data Visualization</td>
-            <td>2019</td>
-            <td>88.0</td>
-        </tr>
-        <tr>
-            <td>333</td>
-            <td>John</td>
-            <td>23</td>
-            <td>MBAN</td>
-            <td>2</td>
-            <td>111</td>
-            <td>Data Visualization</td>
-            <td>2019</td>
-            <td>88.0</td>
-        </tr>
-        <tr>
-            <td>444</td>
-            <td>Amir</td>
-            <td>28</td>
-            <td>MBAN</td>
-            <td>2</td>
-            <td>111</td>
-            <td>Data Visualization</td>
-            <td>2019</td>
-            <td>88.0</td>
-        </tr>
-        <tr>
-            <td>555</td>
-            <td>Gittu</td>
-            <td>20</td>
-            <td>MDS</td>
-            <td>2</td>
-            <td>111</td>
-            <td>Data Visualization</td>
-            <td>2019</td>
-            <td>88.0</td>
-        </tr>
-        <tr>
-            <td>666</td>
-            <td>Isha</td>
-            <td>30</td>
-            <td>MBAN</td>
-            <td>2</td>
-            <td>111</td>
-            <td>Data Visualization</td>
-            <td>2019</td>
-            <td>88.0</td>
-        </tr>
-        <tr>
-            <td>777</td>
-            <td>Heidy</td>
-            <td>30</td>
-            <td>MBAN</td>
-            <td>2</td>
-            <td>111</td>
-            <td>Data Visualization</td>
-            <td>2019</td>
-            <td>88.0</td>
-        </tr>
-        <tr>
-            <td>888</td>
-            <td>Angela</td>
-            <td>27</td>
-            <td>MBAN</td>
-            <td>2</td>
-            <td>111</td>
-            <td>Data Visualization</td>
-            <td>2019</td>
-            <td>88.0</td>
-        </tr>
-        <tr>
-            <td>999</td>
-            <td>Jason</td>
-            <td>30</td>
-            <td>MBAN</td>
-            <td>2</td>
-            <td>111</td>
-            <td>Data Visualization</td>
-            <td>2019</td>
-            <td>88.0</td>
-        </tr>
-        <tr>
-            <td>111</td>
-            <td>Catherine</td>
-            <td>23</td>
-            <td>MBAN</td>
-            <td>3</td>
-            <td>222</td>
-            <td>Health and Technology</td>
-            <td>2020</td>
-            <td>80.0</td>
-        </tr>
-        <tr>
-            <td>222</td>
-            <td>Tiff</td>
-            <td>28</td>
-            <td>MDS</td>
-            <td>3</td>
-            <td>222</td>
-            <td>Health and Technology</td>
-            <td>2020</td>
-            <td>80.0</td>
-        </tr>
-        <tr>
-            <td>333</td>
-            <td>John</td>
-            <td>23</td>
-            <td>MBAN</td>
-            <td>3</td>
-            <td>222</td>
-            <td>Health and Technology</td>
-            <td>2020</td>
-            <td>80.0</td>
-        </tr>
-        <tr>
-            <td>444</td>
-            <td>Amir</td>
-            <td>28</td>
-            <td>MBAN</td>
-            <td>3</td>
-            <td>222</td>
-            <td>Health and Technology</td>
-            <td>2020</td>
-            <td>80.0</td>
-        </tr>
-        <tr>
-            <td>555</td>
-            <td>Gittu</td>
-            <td>20</td>
-            <td>MDS</td>
-            <td>3</td>
-            <td>222</td>
-            <td>Health and Technology</td>
-            <td>2020</td>
-            <td>80.0</td>
-        </tr>
-        <tr>
-            <td>666</td>
-            <td>Isha</td>
-            <td>30</td>
-            <td>MBAN</td>
-            <td>3</td>
-            <td>222</td>
-            <td>Health and Technology</td>
-            <td>2020</td>
-            <td>80.0</td>
-        </tr>
-        <tr>
-            <td>777</td>
-            <td>Heidy</td>
-            <td>30</td>
-            <td>MBAN</td>
-            <td>3</td>
-            <td>222</td>
-            <td>Health and Technology</td>
-            <td>2020</td>
-            <td>80.0</td>
-        </tr>
-        <tr>
-            <td>888</td>
-            <td>Angela</td>
-            <td>27</td>
-            <td>MBAN</td>
-            <td>3</td>
-            <td>222</td>
-            <td>Health and Technology</td>
-            <td>2020</td>
-            <td>80.0</td>
-        </tr>
-        <tr>
-            <td>999</td>
-            <td>Jason</td>
-            <td>30</td>
-            <td>MBAN</td>
-            <td>3</td>
-            <td>222</td>
-            <td>Health and Technology</td>
-            <td>2020</td>
-            <td>80.0</td>
-        </tr>
-        <tr>
-            <td>111</td>
-            <td>Catherine</td>
-            <td>23</td>
-            <td>MBAN</td>
-            <td>4</td>
-            <td>222</td>
-            <td>Web and Cloud Computing</td>
-            <td>2019</td>
-            <td>91.0</td>
-        </tr>
-        <tr>
-            <td>222</td>
-            <td>Tiff</td>
-            <td>28</td>
-            <td>MDS</td>
-            <td>4</td>
-            <td>222</td>
-            <td>Web and Cloud Computing</td>
-            <td>2019</td>
-            <td>91.0</td>
-        </tr>
-        <tr>
-            <td>333</td>
-            <td>John</td>
-            <td>23</td>
-            <td>MBAN</td>
-            <td>4</td>
-            <td>222</td>
-            <td>Web and Cloud Computing</td>
-            <td>2019</td>
-            <td>91.0</td>
-        </tr>
-        <tr>
-            <td>444</td>
-            <td>Amir</td>
-            <td>28</td>
-            <td>MBAN</td>
-            <td>4</td>
-            <td>222</td>
-            <td>Web and Cloud Computing</td>
-            <td>2019</td>
-            <td>91.0</td>
-        </tr>
-        <tr>
-            <td>555</td>
-            <td>Gittu</td>
-            <td>20</td>
-            <td>MDS</td>
-            <td>4</td>
-            <td>222</td>
-            <td>Web and Cloud Computing</td>
-            <td>2019</td>
-            <td>91.0</td>
-        </tr>
-        <tr>
-            <td>666</td>
-            <td>Isha</td>
-            <td>30</td>
-            <td>MBAN</td>
-            <td>4</td>
-            <td>222</td>
-            <td>Web and Cloud Computing</td>
-            <td>2019</td>
-            <td>91.0</td>
-        </tr>
-        <tr>
-            <td>777</td>
-            <td>Heidy</td>
-            <td>30</td>
-            <td>MBAN</td>
-            <td>4</td>
-            <td>222</td>
-            <td>Web and Cloud Computing</td>
-            <td>2019</td>
-            <td>91.0</td>
-        </tr>
-        <tr>
-            <td>888</td>
-            <td>Angela</td>
-            <td>27</td>
-            <td>MBAN</td>
-            <td>4</td>
-            <td>222</td>
-            <td>Web and Cloud Computing</td>
-            <td>2019</td>
-            <td>91.0</td>
-        </tr>
-        <tr>
-            <td>999</td>
-            <td>Jason</td>
-            <td>30</td>
-            <td>MBAN</td>
-            <td>4</td>
-            <td>222</td>
-            <td>Web and Cloud Computing</td>
-            <td>2019</td>
-            <td>91.0</td>
-        </tr>
-        <tr>
-            <td>111</td>
-            <td>Catherine</td>
-            <td>23</td>
-            <td>MBAN</td>
-            <td>5</td>
-            <td>222</td>
-            <td>Spark Programming</td>
-            <td>2019</td>
-            <td>90.0</td>
-        </tr>
-        <tr>
-            <td>222</td>
-            <td>Tiff</td>
-            <td>28</td>
-            <td>MDS</td>
-            <td>5</td>
-            <td>222</td>
-            <td>Spark Programming</td>
-            <td>2019</td>
-            <td>90.0</td>
-        </tr>
-        <tr>
-            <td>333</td>
-            <td>John</td>
-            <td>23</td>
-            <td>MBAN</td>
-            <td>5</td>
-            <td>222</td>
-            <td>Spark Programming</td>
-            <td>2019</td>
-            <td>90.0</td>
-        </tr>
-        <tr>
-            <td>444</td>
-            <td>Amir</td>
-            <td>28</td>
-            <td>MBAN</td>
-            <td>5</td>
-            <td>222</td>
-            <td>Spark Programming</td>
-            <td>2019</td>
-            <td>90.0</td>
-        </tr>
-        <tr>
-            <td>555</td>
-            <td>Gittu</td>
-            <td>20</td>
-            <td>MDS</td>
-            <td>5</td>
-            <td>222</td>
-            <td>Spark Programming</td>
-            <td>2019</td>
-            <td>90.0</td>
-        </tr>
-        <tr>
-            <td>666</td>
-            <td>Isha</td>
-            <td>30</td>
-            <td>MBAN</td>
-            <td>5</td>
-            <td>222</td>
-            <td>Spark Programming</td>
-            <td>2019</td>
-            <td>90.0</td>
-        </tr>
-        <tr>
-            <td>777</td>
-            <td>Heidy</td>
-            <td>30</td>
-            <td>MBAN</td>
-            <td>5</td>
-            <td>222</td>
-            <td>Spark Programming</td>
-            <td>2019</td>
-            <td>90.0</td>
-        </tr>
-        <tr>
-            <td>888</td>
-            <td>Angela</td>
-            <td>27</td>
-            <td>MBAN</td>
-            <td>5</td>
-            <td>222</td>
-            <td>Spark Programming</td>
-            <td>2019</td>
-            <td>90.0</td>
-        </tr>
-        <tr>
-            <td>999</td>
-            <td>Jason</td>
-            <td>30</td>
-            <td>MBAN</td>
-            <td>5</td>
-            <td>222</td>
-            <td>Spark Programming</td>
-            <td>2019</td>
-            <td>90.0</td>
-        </tr>
-        <tr>
-            <td>111</td>
-            <td>Catherine</td>
-            <td>23</td>
-            <td>MBAN</td>
-            <td>6</td>
-            <td>333</td>
-            <td>Parallel Computing</td>
-            <td>2019</td>
-            <td>90.0</td>
-        </tr>
-        <tr>
-            <td>222</td>
-            <td>Tiff</td>
-            <td>28</td>
-            <td>MDS</td>
-            <td>6</td>
-            <td>333</td>
-            <td>Parallel Computing</td>
-            <td>2019</td>
-            <td>90.0</td>
-        </tr>
-        <tr>
-            <td>333</td>
-            <td>John</td>
-            <td>23</td>
-            <td>MBAN</td>
-            <td>6</td>
-            <td>333</td>
-            <td>Parallel Computing</td>
-            <td>2019</td>
-            <td>90.0</td>
-        </tr>
-        <tr>
-            <td>444</td>
-            <td>Amir</td>
-            <td>28</td>
-            <td>MBAN</td>
-            <td>6</td>
-            <td>333</td>
-            <td>Parallel Computing</td>
-            <td>2019</td>
-            <td>90.0</td>
-        </tr>
-        <tr>
-            <td>555</td>
-            <td>Gittu</td>
-            <td>20</td>
-            <td>MDS</td>
-            <td>6</td>
-            <td>333</td>
-            <td>Parallel Computing</td>
-            <td>2019</td>
-            <td>90.0</td>
-        </tr>
-        <tr>
-            <td>666</td>
-            <td>Isha</td>
-            <td>30</td>
-            <td>MBAN</td>
-            <td>6</td>
-            <td>333</td>
-            <td>Parallel Computing</td>
-            <td>2019</td>
-            <td>90.0</td>
-        </tr>
-        <tr>
-            <td>777</td>
-            <td>Heidy</td>
-            <td>30</td>
-            <td>MBAN</td>
-            <td>6</td>
-            <td>333</td>
-            <td>Parallel Computing</td>
-            <td>2019</td>
-            <td>90.0</td>
-        </tr>
-        <tr>
-            <td>888</td>
-            <td>Angela</td>
-            <td>27</td>
-            <td>MBAN</td>
-            <td>6</td>
-            <td>333</td>
-            <td>Parallel Computing</td>
-            <td>2019</td>
-            <td>90.0</td>
-        </tr>
-        <tr>
-            <td>999</td>
-            <td>Jason</td>
-            <td>30</td>
-            <td>MBAN</td>
-            <td>6</td>
-            <td>333</td>
-            <td>Parallel Computing</td>
-            <td>2019</td>
-            <td>90.0</td>
-        </tr>
-        <tr>
-            <td>111</td>
-            <td>Catherine</td>
-            <td>23</td>
-            <td>MBAN</td>
-            <td>7</td>
-            <td>444</td>
-            <td>Large Scale Infrastructures</td>
-            <td>2019</td>
-            <td>83.0</td>
-        </tr>
-        <tr>
-            <td>222</td>
-            <td>Tiff</td>
-            <td>28</td>
-            <td>MDS</td>
-            <td>7</td>
-            <td>444</td>
-            <td>Large Scale Infrastructures</td>
-            <td>2019</td>
-            <td>83.0</td>
-        </tr>
-        <tr>
-            <td>333</td>
-            <td>John</td>
-            <td>23</td>
-            <td>MBAN</td>
-            <td>7</td>
-            <td>444</td>
-            <td>Large Scale Infrastructures</td>
-            <td>2019</td>
-            <td>83.0</td>
-        </tr>
-        <tr>
-            <td>444</td>
-            <td>Amir</td>
-            <td>28</td>
-            <td>MBAN</td>
-            <td>7</td>
-            <td>444</td>
-            <td>Large Scale Infrastructures</td>
-            <td>2019</td>
-            <td>83.0</td>
-        </tr>
-        <tr>
-            <td>555</td>
-            <td>Gittu</td>
-            <td>20</td>
-            <td>MDS</td>
-            <td>7</td>
-            <td>444</td>
-            <td>Large Scale Infrastructures</td>
-            <td>2019</td>
-            <td>83.0</td>
-        </tr>
-        <tr>
-            <td>666</td>
-            <td>Isha</td>
-            <td>30</td>
-            <td>MBAN</td>
-            <td>7</td>
-            <td>444</td>
-            <td>Large Scale Infrastructures</td>
-            <td>2019</td>
-            <td>83.0</td>
-        </tr>
-        <tr>
-            <td>777</td>
-            <td>Heidy</td>
-            <td>30</td>
-            <td>MBAN</td>
-            <td>7</td>
-            <td>444</td>
-            <td>Large Scale Infrastructures</td>
-            <td>2019</td>
-            <td>83.0</td>
-        </tr>
-        <tr>
-            <td>888</td>
-            <td>Angela</td>
-            <td>27</td>
-            <td>MBAN</td>
-            <td>7</td>
-            <td>444</td>
-            <td>Large Scale Infrastructures</td>
-            <td>2019</td>
-            <td>83.0</td>
-        </tr>
-        <tr>
-            <td>999</td>
-            <td>Jason</td>
-            <td>30</td>
-            <td>MBAN</td>
-            <td>7</td>
-            <td>444</td>
-            <td>Large Scale Infrastructures</td>
-            <td>2019</td>
-            <td>83.0</td>
-        </tr>
-        <tr>
-            <td>111</td>
-            <td>Catherine</td>
-            <td>23</td>
-            <td>MBAN</td>
-            <td>8</td>
-            <td>444</td>
-            <td>TPCS INFO TECH</td>
-            <td>2019</td>
-            <td>98.0</td>
-        </tr>
-        <tr>
-            <td>222</td>
-            <td>Tiff</td>
-            <td>28</td>
-            <td>MDS</td>
-            <td>8</td>
-            <td>444</td>
-            <td>TPCS INFO TECH</td>
-            <td>2019</td>
-            <td>98.0</td>
-        </tr>
-        <tr>
-            <td>333</td>
-            <td>John</td>
-            <td>23</td>
-            <td>MBAN</td>
-            <td>8</td>
-            <td>444</td>
-            <td>TPCS INFO TECH</td>
-            <td>2019</td>
-            <td>98.0</td>
-        </tr>
-        <tr>
-            <td>444</td>
-            <td>Amir</td>
-            <td>28</td>
-            <td>MBAN</td>
-            <td>8</td>
-            <td>444</td>
-            <td>TPCS INFO TECH</td>
-            <td>2019</td>
-            <td>98.0</td>
-        </tr>
-        <tr>
-            <td>555</td>
-            <td>Gittu</td>
-            <td>20</td>
-            <td>MDS</td>
-            <td>8</td>
-            <td>444</td>
-            <td>TPCS INFO TECH</td>
-            <td>2019</td>
-            <td>98.0</td>
-        </tr>
-        <tr>
-            <td>666</td>
-            <td>Isha</td>
-            <td>30</td>
-            <td>MBAN</td>
-            <td>8</td>
-            <td>444</td>
-            <td>TPCS INFO TECH</td>
-            <td>2019</td>
-            <td>98.0</td>
-        </tr>
-        <tr>
-            <td>777</td>
-            <td>Heidy</td>
-            <td>30</td>
-            <td>MBAN</td>
-            <td>8</td>
-            <td>444</td>
-            <td>TPCS INFO TECH</td>
-            <td>2019</td>
-            <td>98.0</td>
-        </tr>
-        <tr>
-            <td>888</td>
-            <td>Angela</td>
-            <td>27</td>
-            <td>MBAN</td>
-            <td>8</td>
-            <td>444</td>
-            <td>TPCS INFO TECH</td>
-            <td>2019</td>
-            <td>98.0</td>
-        </tr>
-        <tr>
-            <td>999</td>
-            <td>Jason</td>
-            <td>30</td>
-            <td>MBAN</td>
-            <td>8</td>
-            <td>444</td>
-            <td>TPCS INFO TECH</td>
-            <td>2019</td>
-            <td>98.0</td>
-        </tr>
-        <tr>
-            <td>111</td>
-            <td>Catherine</td>
-            <td>23</td>
-            <td>MBAN</td>
-            <td>9</td>
-            <td>555</td>
-            <td>TPCS INFO TECH</td>
-            <td>2020</td>
-            <td>78.0</td>
-        </tr>
-        <tr>
-            <td>222</td>
-            <td>Tiff</td>
-            <td>28</td>
-            <td>MDS</td>
-            <td>9</td>
-            <td>555</td>
-            <td>TPCS INFO TECH</td>
-            <td>2020</td>
-            <td>78.0</td>
-        </tr>
-        <tr>
-            <td>333</td>
-            <td>John</td>
-            <td>23</td>
-            <td>MBAN</td>
-            <td>9</td>
-            <td>555</td>
-            <td>TPCS INFO TECH</td>
-            <td>2020</td>
-            <td>78.0</td>
-        </tr>
-        <tr>
-            <td>444</td>
-            <td>Amir</td>
-            <td>28</td>
-            <td>MBAN</td>
-            <td>9</td>
-            <td>555</td>
-            <td>TPCS INFO TECH</td>
-            <td>2020</td>
-            <td>78.0</td>
-        </tr>
-        <tr>
-            <td>555</td>
-            <td>Gittu</td>
-            <td>20</td>
-            <td>MDS</td>
-            <td>9</td>
-            <td>555</td>
-            <td>TPCS INFO TECH</td>
-            <td>2020</td>
-            <td>78.0</td>
-        </tr>
-        <tr>
-            <td>666</td>
-            <td>Isha</td>
-            <td>30</td>
-            <td>MBAN</td>
-            <td>9</td>
-            <td>555</td>
-            <td>TPCS INFO TECH</td>
-            <td>2020</td>
-            <td>78.0</td>
-        </tr>
-        <tr>
-            <td>777</td>
-            <td>Heidy</td>
-            <td>30</td>
-            <td>MBAN</td>
-            <td>9</td>
-            <td>555</td>
-            <td>TPCS INFO TECH</td>
-            <td>2020</td>
-            <td>78.0</td>
-        </tr>
-        <tr>
-            <td>888</td>
-            <td>Angela</td>
-            <td>27</td>
-            <td>MBAN</td>
-            <td>9</td>
-            <td>555</td>
-            <td>TPCS INFO TECH</td>
-            <td>2020</td>
-            <td>78.0</td>
-        </tr>
-        <tr>
-            <td>999</td>
-            <td>Jason</td>
-            <td>30</td>
-            <td>MBAN</td>
-            <td>9</td>
-            <td>555</td>
-            <td>TPCS INFO TECH</td>
-            <td>2020</td>
-            <td>78.0</td>
-        </tr>
-        <tr>
-            <td>111</td>
-            <td>Catherine</td>
-            <td>23</td>
-            <td>MBAN</td>
-            <td>10</td>
-            <td>555</td>
-            <td>Health and Technology</td>
-            <td>2020</td>
-            <td>81.0</td>
-        </tr>
-        <tr>
-            <td>222</td>
-            <td>Tiff</td>
-            <td>28</td>
-            <td>MDS</td>
-            <td>10</td>
-            <td>555</td>
-            <td>Health and Technology</td>
-            <td>2020</td>
-            <td>81.0</td>
-        </tr>
-        <tr>
-            <td>333</td>
-            <td>John</td>
-            <td>23</td>
-            <td>MBAN</td>
-            <td>10</td>
-            <td>555</td>
-            <td>Health and Technology</td>
-            <td>2020</td>
-            <td>81.0</td>
-        </tr>
-        <tr>
-            <td>444</td>
-            <td>Amir</td>
-            <td>28</td>
-            <td>MBAN</td>
-            <td>10</td>
-            <td>555</td>
-            <td>Health and Technology</td>
-            <td>2020</td>
-            <td>81.0</td>
-        </tr>
-        <tr>
-            <td>555</td>
-            <td>Gittu</td>
-            <td>20</td>
-            <td>MDS</td>
-            <td>10</td>
-            <td>555</td>
-            <td>Health and Technology</td>
-            <td>2020</td>
-            <td>81.0</td>
-        </tr>
-        <tr>
-            <td>666</td>
-            <td>Isha</td>
-            <td>30</td>
-            <td>MBAN</td>
-            <td>10</td>
-            <td>555</td>
-            <td>Health and Technology</td>
-            <td>2020</td>
-            <td>81.0</td>
-        </tr>
-        <tr>
-            <td>777</td>
-            <td>Heidy</td>
-            <td>30</td>
-            <td>MBAN</td>
-            <td>10</td>
-            <td>555</td>
-            <td>Health and Technology</td>
-            <td>2020</td>
-            <td>81.0</td>
-        </tr>
-        <tr>
-            <td>888</td>
-            <td>Angela</td>
-            <td>27</td>
-            <td>MBAN</td>
-            <td>10</td>
-            <td>555</td>
-            <td>Health and Technology</td>
-            <td>2020</td>
-            <td>81.0</td>
-        </tr>
-        <tr>
-            <td>999</td>
-            <td>Jason</td>
-            <td>30</td>
-            <td>MBAN</td>
-            <td>10</td>
-            <td>555</td>
-            <td>Health and Technology</td>
-            <td>2020</td>
-            <td>81.0</td>
-        </tr>
-        <tr>
-            <td>111</td>
-            <td>Catherine</td>
-            <td>23</td>
-            <td>MBAN</td>
-            <td>11</td>
-            <td>666</td>
-            <td>Data Visualization</td>
-            <td>2021</td>
-            <td>85.0</td>
-        </tr>
-        <tr>
-            <td>222</td>
-            <td>Tiff</td>
-            <td>28</td>
-            <td>MDS</td>
-            <td>11</td>
-            <td>666</td>
-            <td>Data Visualization</td>
-            <td>2021</td>
-            <td>85.0</td>
-        </tr>
-        <tr>
-            <td>333</td>
-            <td>John</td>
-            <td>23</td>
-            <td>MBAN</td>
-            <td>11</td>
-            <td>666</td>
-            <td>Data Visualization</td>
-            <td>2021</td>
-            <td>85.0</td>
-        </tr>
-        <tr>
-            <td>444</td>
-            <td>Amir</td>
-            <td>28</td>
-            <td>MBAN</td>
-            <td>11</td>
-            <td>666</td>
-            <td>Data Visualization</td>
-            <td>2021</td>
-            <td>85.0</td>
-        </tr>
-        <tr>
-            <td>555</td>
-            <td>Gittu</td>
-            <td>20</td>
-            <td>MDS</td>
-            <td>11</td>
-            <td>666</td>
-            <td>Data Visualization</td>
-            <td>2021</td>
-            <td>85.0</td>
-        </tr>
-        <tr>
-            <td>666</td>
-            <td>Isha</td>
-            <td>30</td>
-            <td>MBAN</td>
-            <td>11</td>
-            <td>666</td>
-            <td>Data Visualization</td>
-            <td>2021</td>
-            <td>85.0</td>
-        </tr>
-        <tr>
-            <td>777</td>
-            <td>Heidy</td>
-            <td>30</td>
-            <td>MBAN</td>
-            <td>11</td>
-            <td>666</td>
-            <td>Data Visualization</td>
-            <td>2021</td>
-            <td>85.0</td>
-        </tr>
-        <tr>
-            <td>888</td>
-            <td>Angela</td>
-            <td>27</td>
-            <td>MBAN</td>
-            <td>11</td>
-            <td>666</td>
-            <td>Data Visualization</td>
-            <td>2021</td>
-            <td>85.0</td>
-        </tr>
-        <tr>
-            <td>999</td>
-            <td>Jason</td>
-            <td>30</td>
-            <td>MBAN</td>
-            <td>11</td>
-            <td>666</td>
-            <td>Data Visualization</td>
-            <td>2021</td>
-            <td>85.0</td>
-        </tr>
-        <tr>
-            <td>111</td>
-            <td>Catherine</td>
-            <td>23</td>
-            <td>MBAN</td>
-            <td>12</td>
-            <td>666</td>
-            <td>Parallel Computing</td>
-            <td>2019</td>
-            <td>87.0</td>
-        </tr>
-        <tr>
-            <td>222</td>
-            <td>Tiff</td>
-            <td>28</td>
-            <td>MDS</td>
-            <td>12</td>
-            <td>666</td>
-            <td>Parallel Computing</td>
-            <td>2019</td>
-            <td>87.0</td>
-        </tr>
-        <tr>
-            <td>333</td>
-            <td>John</td>
-            <td>23</td>
-            <td>MBAN</td>
-            <td>12</td>
-            <td>666</td>
-            <td>Parallel Computing</td>
-            <td>2019</td>
-            <td>87.0</td>
-        </tr>
-        <tr>
-            <td>444</td>
-            <td>Amir</td>
-            <td>28</td>
-            <td>MBAN</td>
-            <td>12</td>
-            <td>666</td>
-            <td>Parallel Computing</td>
-            <td>2019</td>
-            <td>87.0</td>
-        </tr>
-        <tr>
-            <td>555</td>
-            <td>Gittu</td>
-            <td>20</td>
-            <td>MDS</td>
-            <td>12</td>
-            <td>666</td>
-            <td>Parallel Computing</td>
-            <td>2019</td>
-            <td>87.0</td>
-        </tr>
-        <tr>
-            <td>666</td>
-            <td>Isha</td>
-            <td>30</td>
-            <td>MBAN</td>
-            <td>12</td>
-            <td>666</td>
-            <td>Parallel Computing</td>
-            <td>2019</td>
-            <td>87.0</td>
-        </tr>
-        <tr>
-            <td>777</td>
-            <td>Heidy</td>
-            <td>30</td>
-            <td>MBAN</td>
-            <td>12</td>
-            <td>666</td>
-            <td>Parallel Computing</td>
-            <td>2019</td>
-            <td>87.0</td>
-        </tr>
-        <tr>
-            <td>888</td>
-            <td>Angela</td>
-            <td>27</td>
-            <td>MBAN</td>
-            <td>12</td>
-            <td>666</td>
-            <td>Parallel Computing</td>
-            <td>2019</td>
-            <td>87.0</td>
-        </tr>
-        <tr>
-            <td>999</td>
-            <td>Jason</td>
-            <td>30</td>
-            <td>MBAN</td>
-            <td>12</td>
-            <td>666</td>
-            <td>Parallel Computing</td>
-            <td>2019</td>
-            <td>87.0</td>
-        </tr>
-        <tr>
-            <td>111</td>
-            <td>Catherine</td>
-            <td>23</td>
-            <td>MBAN</td>
-            <td>13</td>
-            <td>888</td>
-            <td>Spark Programming</td>
-            <td>2019</td>
-            <td>93.0</td>
-        </tr>
-        <tr>
-            <td>222</td>
-            <td>Tiff</td>
-            <td>28</td>
-            <td>MDS</td>
-            <td>13</td>
-            <td>888</td>
-            <td>Spark Programming</td>
-            <td>2019</td>
-            <td>93.0</td>
-        </tr>
-        <tr>
-            <td>333</td>
-            <td>John</td>
-            <td>23</td>
-            <td>MBAN</td>
-            <td>13</td>
-            <td>888</td>
-            <td>Spark Programming</td>
-            <td>2019</td>
-            <td>93.0</td>
-        </tr>
-        <tr>
-            <td>444</td>
-            <td>Amir</td>
-            <td>28</td>
-            <td>MBAN</td>
-            <td>13</td>
-            <td>888</td>
-            <td>Spark Programming</td>
-            <td>2019</td>
-            <td>93.0</td>
-        </tr>
-        <tr>
-            <td>555</td>
-            <td>Gittu</td>
-            <td>20</td>
-            <td>MDS</td>
-            <td>13</td>
-            <td>888</td>
-            <td>Spark Programming</td>
-            <td>2019</td>
-            <td>93.0</td>
-        </tr>
-        <tr>
-            <td>666</td>
-            <td>Isha</td>
-            <td>30</td>
-            <td>MBAN</td>
-            <td>13</td>
-            <td>888</td>
-            <td>Spark Programming</td>
-            <td>2019</td>
-            <td>93.0</td>
-        </tr>
-        <tr>
-            <td>777</td>
-            <td>Heidy</td>
-            <td>30</td>
-            <td>MBAN</td>
-            <td>13</td>
-            <td>888</td>
-            <td>Spark Programming</td>
-            <td>2019</td>
-            <td>93.0</td>
-        </tr>
-        <tr>
-            <td>888</td>
-            <td>Angela</td>
-            <td>27</td>
-            <td>MBAN</td>
-            <td>13</td>
-            <td>888</td>
-            <td>Spark Programming</td>
-            <td>2019</td>
-            <td>93.0</td>
-        </tr>
-        <tr>
-            <td>999</td>
-            <td>Jason</td>
-            <td>30</td>
-            <td>MBAN</td>
-            <td>13</td>
-            <td>888</td>
-            <td>Spark Programming</td>
-            <td>2019</td>
-            <td>93.0</td>
-        </tr>
-        <tr>
-            <td>111</td>
-            <td>Catherine</td>
-            <td>23</td>
-            <td>MBAN</td>
-            <td>14</td>
-            <td>999</td>
-            <td>TPCS INFO TECH</td>
-            <td>2019</td>
-            <td>98.0</td>
-        </tr>
-        <tr>
-            <td>222</td>
-            <td>Tiff</td>
-            <td>28</td>
-            <td>MDS</td>
-            <td>14</td>
-            <td>999</td>
-            <td>TPCS INFO TECH</td>
-            <td>2019</td>
-            <td>98.0</td>
-        </tr>
-        <tr>
-            <td>333</td>
-            <td>John</td>
-            <td>23</td>
-            <td>MBAN</td>
-            <td>14</td>
-            <td>999</td>
-            <td>TPCS INFO TECH</td>
-            <td>2019</td>
-            <td>98.0</td>
-        </tr>
-        <tr>
-            <td>444</td>
-            <td>Amir</td>
-            <td>28</td>
-            <td>MBAN</td>
-            <td>14</td>
-            <td>999</td>
-            <td>TPCS INFO TECH</td>
-            <td>2019</td>
-            <td>98.0</td>
-        </tr>
-        <tr>
-            <td>555</td>
-            <td>Gittu</td>
-            <td>20</td>
-            <td>MDS</td>
-            <td>14</td>
-            <td>999</td>
-            <td>TPCS INFO TECH</td>
-            <td>2019</td>
-            <td>98.0</td>
-        </tr>
-        <tr>
-            <td>666</td>
-            <td>Isha</td>
-            <td>30</td>
-            <td>MBAN</td>
-            <td>14</td>
-            <td>999</td>
-            <td>TPCS INFO TECH</td>
-            <td>2019</td>
-            <td>98.0</td>
-        </tr>
-        <tr>
-            <td>777</td>
-            <td>Heidy</td>
-            <td>30</td>
-            <td>MBAN</td>
-            <td>14</td>
-            <td>999</td>
-            <td>TPCS INFO TECH</td>
-            <td>2019</td>
-            <td>98.0</td>
-        </tr>
-        <tr>
-            <td>888</td>
-            <td>Angela</td>
-            <td>27</td>
-            <td>MBAN</td>
-            <td>14</td>
-            <td>999</td>
-            <td>TPCS INFO TECH</td>
-            <td>2019</td>
-            <td>98.0</td>
-        </tr>
-        <tr>
-            <td>999</td>
-            <td>Jason</td>
-            <td>30</td>
-            <td>MBAN</td>
-            <td>14</td>
-            <td>999</td>
-            <td>TPCS INFO TECH</td>
-            <td>2019</td>
-            <td>98.0</td>
-        </tr>
-        <tr>
-            <td>111</td>
-            <td>Catherine</td>
-            <td>23</td>
-            <td>MBAN</td>
-            <td>15</td>
-            <td>999</td>
-            <td>Data Visualization</td>
-            <td>2019</td>
-            <td>87.0</td>
-        </tr>
-        <tr>
-            <td>222</td>
-            <td>Tiff</td>
-            <td>28</td>
-            <td>MDS</td>
-            <td>15</td>
-            <td>999</td>
-            <td>Data Visualization</td>
-            <td>2019</td>
-            <td>87.0</td>
-        </tr>
-        <tr>
-            <td>333</td>
-            <td>John</td>
-            <td>23</td>
-            <td>MBAN</td>
-            <td>15</td>
-            <td>999</td>
-            <td>Data Visualization</td>
-            <td>2019</td>
-            <td>87.0</td>
-        </tr>
-        <tr>
-            <td>444</td>
-            <td>Amir</td>
-            <td>28</td>
-            <td>MBAN</td>
-            <td>15</td>
-            <td>999</td>
-            <td>Data Visualization</td>
-            <td>2019</td>
-            <td>87.0</td>
-        </tr>
-        <tr>
-            <td>555</td>
-            <td>Gittu</td>
-            <td>20</td>
-            <td>MDS</td>
-            <td>15</td>
-            <td>999</td>
-            <td>Data Visualization</td>
-            <td>2019</td>
-            <td>87.0</td>
-        </tr>
-        <tr>
-            <td>666</td>
-            <td>Isha</td>
-            <td>30</td>
-            <td>MBAN</td>
-            <td>15</td>
-            <td>999</td>
-            <td>Data Visualization</td>
-            <td>2019</td>
-            <td>87.0</td>
-        </tr>
-        <tr>
-            <td>777</td>
-            <td>Heidy</td>
-            <td>30</td>
-            <td>MBAN</td>
-            <td>15</td>
-            <td>999</td>
-            <td>Data Visualization</td>
-            <td>2019</td>
-            <td>87.0</td>
-        </tr>
-        <tr>
-            <td>888</td>
-            <td>Angela</td>
-            <td>27</td>
-            <td>MBAN</td>
-            <td>15</td>
-            <td>999</td>
-            <td>Data Visualization</td>
-            <td>2019</td>
-            <td>87.0</td>
-        </tr>
-        <tr>
-            <td>999</td>
-            <td>Jason</td>
-            <td>30</td>
-            <td>MBAN</td>
-            <td>15</td>
-            <td>999</td>
-            <td>Data Visualization</td>
-            <td>2019</td>
-            <td>87.0</td>
-        </tr>
-        <tr>
-            <td>111</td>
-            <td>Catherine</td>
-            <td>23</td>
-            <td>MBAN</td>
-            <td>16</td>
-            <td>1000</td>
-            <td>C programming</td>
-            <td>2019</td>
-            <td>87.0</td>
-        </tr>
-        <tr>
-            <td>222</td>
-            <td>Tiff</td>
-            <td>28</td>
-            <td>MDS</td>
-            <td>16</td>
-            <td>1000</td>
-            <td>C programming</td>
-            <td>2019</td>
-            <td>87.0</td>
-        </tr>
-        <tr>
-            <td>333</td>
-            <td>John</td>
-            <td>23</td>
-            <td>MBAN</td>
-            <td>16</td>
-            <td>1000</td>
-            <td>C programming</td>
-            <td>2019</td>
-            <td>87.0</td>
-        </tr>
-        <tr>
-            <td>444</td>
-            <td>Amir</td>
-            <td>28</td>
-            <td>MBAN</td>
-            <td>16</td>
-            <td>1000</td>
-            <td>C programming</td>
-            <td>2019</td>
-            <td>87.0</td>
-        </tr>
-        <tr>
-            <td>555</td>
-            <td>Gittu</td>
-            <td>20</td>
-            <td>MDS</td>
-            <td>16</td>
-            <td>1000</td>
-            <td>C programming</td>
-            <td>2019</td>
-            <td>87.0</td>
-        </tr>
-        <tr>
-            <td>666</td>
-            <td>Isha</td>
-            <td>30</td>
-            <td>MBAN</td>
-            <td>16</td>
-            <td>1000</td>
-            <td>C programming</td>
-            <td>2019</td>
-            <td>87.0</td>
-        </tr>
-        <tr>
-            <td>777</td>
-            <td>Heidy</td>
-            <td>30</td>
-            <td>MBAN</td>
-            <td>16</td>
-            <td>1000</td>
-            <td>C programming</td>
-            <td>2019</td>
-            <td>87.0</td>
-        </tr>
-        <tr>
-            <td>888</td>
-            <td>Angela</td>
-            <td>27</td>
-            <td>MBAN</td>
-            <td>16</td>
-            <td>1000</td>
-            <td>C programming</td>
-            <td>2019</td>
-            <td>87.0</td>
-        </tr>
-        <tr>
-            <td>999</td>
-            <td>Jason</td>
-            <td>30</td>
-            <td>MBAN</td>
-            <td>16</td>
-            <td>1000</td>
-            <td>C programming</td>
-            <td>2019</td>
-            <td>87.0</td>
-        </tr>
-        <tr>
-            <td>111</td>
-            <td>Catherine</td>
-            <td>23</td>
-            <td>MBAN</td>
-            <td>17</td>
-            <td>1111</td>
-            <td>Introduction to Genomics</td>
-            <td>2019</td>
-            <td>87.0</td>
-        </tr>
-        <tr>
-            <td>222</td>
-            <td>Tiff</td>
-            <td>28</td>
-            <td>MDS</td>
-            <td>17</td>
-            <td>1111</td>
-            <td>Introduction to Genomics</td>
-            <td>2019</td>
-            <td>87.0</td>
-        </tr>
-        <tr>
-            <td>333</td>
-            <td>John</td>
-            <td>23</td>
-            <td>MBAN</td>
-            <td>17</td>
-            <td>1111</td>
-            <td>Introduction to Genomics</td>
-            <td>2019</td>
-            <td>87.0</td>
-        </tr>
-        <tr>
-            <td>444</td>
-            <td>Amir</td>
-            <td>28</td>
-            <td>MBAN</td>
-            <td>17</td>
-            <td>1111</td>
-            <td>Introduction to Genomics</td>
-            <td>2019</td>
-            <td>87.0</td>
-        </tr>
-        <tr>
-            <td>555</td>
-            <td>Gittu</td>
-            <td>20</td>
-            <td>MDS</td>
-            <td>17</td>
-            <td>1111</td>
-            <td>Introduction to Genomics</td>
-            <td>2019</td>
-            <td>87.0</td>
-        </tr>
-        <tr>
-            <td>666</td>
-            <td>Isha</td>
-            <td>30</td>
-            <td>MBAN</td>
-            <td>17</td>
-            <td>1111</td>
-            <td>Introduction to Genomics</td>
-            <td>2019</td>
-            <td>87.0</td>
-        </tr>
-        <tr>
-            <td>777</td>
-            <td>Heidy</td>
-            <td>30</td>
-            <td>MBAN</td>
-            <td>17</td>
-            <td>1111</td>
-            <td>Introduction to Genomics</td>
-            <td>2019</td>
-            <td>87.0</td>
-        </tr>
-        <tr>
-            <td>888</td>
-            <td>Angela</td>
-            <td>27</td>
-            <td>MBAN</td>
-            <td>17</td>
-            <td>1111</td>
-            <td>Introduction to Genomics</td>
-            <td>2019</td>
-            <td>87.0</td>
-        </tr>
-        <tr>
-            <td>999</td>
-            <td>Jason</td>
-            <td>30</td>
-            <td>MBAN</td>
-            <td>17</td>
-            <td>1111</td>
-            <td>Introduction to Genomics</td>
-            <td>2019</td>
-            <td>87.0</td>
-        </tr>
-    </tbody>
-</table></div></div>
-</div>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>But in real life, we usually perform joins on a column, and we will discuss some types of joins on columns in the following sections. Since we are performing joins on a column, we need to pass that information using the <code class="docutils literal notranslate"><span class="pre">ON</span></code> keyword to give which columns are used to stitch the tables together</p>
-</div>
-</div>
 <div class="section" id="inner-join">
-<h3><span class="section-number">1.6.3. </span>Inner join<a class="headerlink" href="#inner-join" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">1.6.2. </span>Inner join<a class="headerlink" href="#inner-join" title="Permalink to this headline">¶</a></h3>
 <p>Inner join only returns the matching rows from the left and right tables.</p>
 <p>If you think about it from a Venn diagram perspective, it will look like…</p>
 <a class="reference internal image-reference" href="../_images/inner.png"><img alt="../_images/inner.png" src="../_images/inner.png" style="width: 40%;" /></a>
@@ -4191,10 +2465,10 @@ ON
 </div>
 </div>
 <div class="section" id="outer-join">
-<h3><span class="section-number">1.6.4. </span>Outer join<a class="headerlink" href="#outer-join" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">1.6.3. </span>Outer join<a class="headerlink" href="#outer-join" title="Permalink to this headline">¶</a></h3>
 <p>An outer join returns all the rows from one or both of the tables that join. There are 3 variations of it.</p>
 <div class="section" id="left-outer">
-<h4><span class="section-number">1.6.4.1. </span>Left outer<a class="headerlink" href="#left-outer" title="Permalink to this headline">¶</a></h4>
+<h4><span class="section-number">1.6.3.1. </span>Left outer<a class="headerlink" href="#left-outer" title="Permalink to this headline">¶</a></h4>
 <p>The first table that appears in the query is the left table, and the one appearing after the <code class="docutils literal notranslate"><span class="pre">LEFT</span> <span class="pre">OUTER</span> <span class="pre">JOIN</span></code> keyword is the right table.</p>
 <p>A left outer join returns all rows from the left table (matching or not), in addition to the matching rows from both tables. So the non-matching rows from the left table are assigned null values in the columns that belong to the right table.</p>
 <p>If you think about it from a Venn diagram perspective, it will look like…</p>
@@ -4331,7 +2605,7 @@ ON
 </div>
 </div>
 <div class="section" id="right-outer">
-<h4><span class="section-number">1.6.4.2. </span>Right outer<a class="headerlink" href="#right-outer" title="Permalink to this headline">¶</a></h4>
+<h4><span class="section-number">1.6.3.2. </span>Right outer<a class="headerlink" href="#right-outer" title="Permalink to this headline">¶</a></h4>
 <p>It behaves exactly in the same way as a left join, except that it keeps all rows from the right table and only the matching ones from the left table.</p>
 <p>If you think about it from a Venn diagram perspective, it will look like.</p>
 <a class="reference internal image-reference" href="../_images/right.png"><img alt="../_images/right.png" src="../_images/right.png" style="width: 40%;" /></a>
@@ -4473,7 +2747,7 @@ ON
 </div>
 </div>
 <div class="section" id="full-outer">
-<h4><span class="section-number">1.6.4.3. </span>Full outer<a class="headerlink" href="#full-outer" title="Permalink to this headline">¶</a></h4>
+<h4><span class="section-number">1.6.3.3. </span>Full outer<a class="headerlink" href="#full-outer" title="Permalink to this headline">¶</a></h4>
 <p>left join + right join = full outer join.</p>
 <p>It retrieves matching and non-matching rows from both tables.</p>
 <p>If you think about it from a Venn diagram perspective, it will look like.</p>
@@ -4625,8 +2899,7 @@ ON
 </div>
 </div>
 <div class="section" id="summarize">
-<h3><span class="section-number">1.6.5. </span>Summarize:<a class="headerlink" href="#summarize" title="Permalink to this headline">¶</a></h3>
-<p><em><strong>CARTESIAN JOIN:</strong></em> returns the Cartesian product of the sets of records from the two or more joined tables.</p>
+<h3><span class="section-number">1.6.4. </span>Summarize:<a class="headerlink" href="#summarize" title="Permalink to this headline">¶</a></h3>
 <p><em><strong>INNER JOIN:</strong></em> returns rows when there is a match in both tables.</p>
 <p><em><strong>LEFT JOIN:</strong></em> returns all rows from the left table, even if there are no matches in the right table.</p>
 <p><em><strong>RIGHT JOIN:</strong></em> returns all rows from the right table, even if there are no matches in the left table.</p>
@@ -4689,7 +2962,7 @@ ORDER BY course_year DESC;
 </div>
 </div>
 <div class="section" id="checkpoint-3-take-some-time-and-think-if-you-can">
-<h3><span class="section-number">1.6.6. </span>Checkpoint 3 !! Take some time and think if you can…<a class="headerlink" href="#checkpoint-3-take-some-time-and-think-if-you-can" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">1.6.5. </span>Checkpoint 3 !! Take some time and think if you can…<a class="headerlink" href="#checkpoint-3-take-some-time-and-think-if-you-can" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
 <li><p>Understand different kinds of joins</p></li>
 <li><p>When to use joins</p></li>
@@ -4697,9 +2970,9 @@ ORDER BY course_year DESC;
 </ul>
 </div>
 <div class="section" id="check-point-3-exercise">
-<h3><span class="section-number">1.6.7. </span>Check point 3 exercise.<a class="headerlink" href="#check-point-3-exercise" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">1.6.6. </span>Check point 3 exercise.<a class="headerlink" href="#check-point-3-exercise" title="Permalink to this headline">¶</a></h3>
 <div class="section" id="id3">
-<h4><span class="section-number">1.6.7.1. </span>iclicker questions<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h4>
+<h4><span class="section-number">1.6.6.1. </span>iclicker questions<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h4>
 <p><em><strong>Question 1:</strong></em> Spot the issue, if any, in this SQL query</p>
 <div class="highlight-sql notranslate"><div class="highlight"><pre><span></span><span class="k">select</span> <span class="n">s</span><span class="p">.</span><span class="n">stud_name</span><span class="p">,</span><span class="k">c</span><span class="p">.</span><span class="n">course_name</span><span class="p">,</span> <span class="k">c</span><span class="p">.</span><span class="n">course_year</span>
 <span class="k">FROM</span> <span class="n">students</span> <span class="k">AS</span> <span class="n">s</span>
@@ -4717,7 +2990,10 @@ ORDER BY course_year DESC;
 <div class="toggle docutils container">
 <p><em><strong>Answer: D</strong></em></p>
 </div>
-<p><em><strong>Question 2:</strong></em> “In this Venn diagram green color indicate left outer join” - is this statement TRUE/FALSE?</p>
+</div>
+<div class="section" id="id4">
+<h4><span class="section-number">1.6.6.2. </span>Reasoning Question (optional)<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h4>
+<p><em><strong>Question 1:</strong></em> “In this Venn diagram green color indicate left outer join” - is this statement TRUE/FALSE?</p>
 <a class="reference internal image-reference" href="../_images/color.png"><img alt="../_images/color.png" src="../_images/color.png" style="width: 40%;" /></a>
 <p>A: TRUE</p>
 <p>B: FALSE</p>
